@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+    }
+
+    .quiz-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .question-section {
+        margin-bottom: 20px;
+    }
+
+    #question {
+        font-size: 18px;
+        color: #333;
+    }
+
+    .options-section {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .option-label {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 0;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .option-radio {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .option-label:hover {
+        background-color: #e9ecef;
+    }
+
+    .option-radio:checked+span {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .option-label span {
+        display: inline-block;
+        color: #333;
+    }
+
+    .option-radio:checked+span:before {
+        content: '✓';
+        color: #fff;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .next-button-section {
+        margin-top: 20px;
+    }
+
+    .next-button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .next-button:hover {
+        background-color: #218838;
+    }
+</style>
+
+<body>
+    <div class="quiz-container">
+        <div class="question-section">
+            <h1 id="question">Question : 1  What is the result of trying to access an array element with a string index in JavaScript?</h1>
+        </div>
+        <form class="options-section">
+            <label class="option-label">
+                <input type="radio" name="option" value="option1" class="option-radio">
+                Option 1
+            </label>
+            <label class="option-label">
+                <input type="radio" name="option" value="option2" class="option-radio">
+                Option 2
+            </label>
+            <label class="option-label">
+                <input type="radio" name="option" value="option3" class="option-radio">
+                Option 3
+            </label>
+            <label class="option-label">
+                <input type="radio" name="option" value="option4" class="option-radio">
+                Option 4
+            </label>
+        </form>
+        <div class="next-button-section">
+            <button class="next-button">Next</button>
+        </div>
+    </div>
+</body>
+
+</html>
