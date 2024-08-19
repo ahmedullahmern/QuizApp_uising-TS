@@ -87,7 +87,7 @@
 
     .next-button {
         padding: 10px 20px;
-        background-color: blue;
+        background-color: #28a745;
         color: #fff;
         border: none;
         border-radius: 5px;
@@ -103,9 +103,10 @@
 <body>
     <div class="quiz-container">
         <div class="question-section">
-            <h1 id="question">Question : 1  What is the result of trying to access an array element with a string index in JavaScript?</h1>
+            <!-- <span id="Question_Number">Question : 1 </span> -->
+            <h1 id="question">Question : 1 </h1>
         </div>
-        <form class="options-section">
+        <div id="Chosse_answer" class="options-section">
             <label class="option-label">
                 <input type="radio" name="option" value="option1" class="option-radio">
                 Option 1
@@ -122,11 +123,12 @@
                 <input type="radio" name="option" value="option4" class="option-radio">
                 Option 4
             </label>
-        </form>
+        </div>
         <div class="next-button-section">
-            <button class="next-button">Next</button>
+            <button id="next_btn" class="next-button">Next</button>
         </div>
     </div>
+    <script src="dist/index.js"></script>
 </body>
 
 </html>
