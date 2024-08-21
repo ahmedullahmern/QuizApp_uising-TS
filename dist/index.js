@@ -60,5 +60,13 @@ renderQiuzhtml();
 function renderQiuzhtml() {
     const que = typeScriptQuizQuestions[currentInd];
     question_html.innerText = `${currentInd + 1})${que.question}`;
+    const allOptions = que.options.map((data, ind) => {
+        console.log(data);
+        ` <label class="option-label">
+                <input type="radio" name="${currentInd}" value="${data}" class="option-radio">
+                ${data}
+            </label>`;
+    });
+    console.log("alloptoins", allOptions);
 }
 console.log("typeScriptQuizQuestions", typeScriptQuizQuestions[currentInd]);

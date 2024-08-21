@@ -61,25 +61,26 @@ const typeScriptQuizQuestions: QuizQuestion[] = [
 
 const question_html = document.querySelector("#question") as HTMLHeadElement;
 const Chosse_answer = document.querySelector("#Chosse_answer") as HTMLDivElement
-const next_btn = document.querySelector("#next_btn") as HTMLButtonElement
+const next_btn = document.querySelector("#next_btn")as HTMLButtonElement
 
-let currentInd: number = 0
+let currentInd :number = 0
 
 renderQiuzhtml()
 
-function renderQiuzhtml() {
+function renderQiuzhtml(){
     const que = typeScriptQuizQuestions[currentInd];
-    question_html.innerText = `${currentInd + 1})${que.question}`
-
-    const allOptions = que.options.map((data, ind) => {
-        ` <label class="option-label">
-                <input type="radio" name="${ind}"
-                 value="option2" class="option-radio">
-                ${data}
-            </label>`      
-    })
-    console.log("checkUP",allOptions);
+    question_html.innerText = `${currentInd+1})${que.question}`
     
+    const allOptions = que.options.map((data,ind)=>{
+        console.log(data);
+        
+        ` <label class="option-label">
+                <input type="radio" name="${currentInd}" value="${data}" class="option-radio">
+                ${data}
+            </label>`
+    })
+    
+    console.log("alloptoins",allOptions);
 }
 
-console.log("typeScriptQuizQuestions", typeScriptQuizQuestions[currentInd]);
+console.log("typeScriptQuizQuestions",typeScriptQuizQuestions[currentInd]);
